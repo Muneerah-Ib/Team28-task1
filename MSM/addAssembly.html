@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="msm.css">
+
+    <script src="https://kit.fontawesome.com/996973c893.js"></script>
+
+    <title>MSM</title>
+  </head>
+  <body>
+      <!-- Navbar -->
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">MSM</a>
+        <button class="navbar-toggler ml-auto hidden-sm-up float-xs-left " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Assemblies
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="addAssembly.html">Add assembly</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="addDissembly.html">Add dissembly</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="viewAssemblies.html">View assemblies</a>
+                <div class="dropdown-divider"></div> 
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Bill of Materials  
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="addBills.html">Add bills of materials</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="viewBills.html">view bills of materials</a> 
+                  <div class="dropdown-divider"></div>    
+                </div>
+                <li class="nav-item">
+                  <a class="nav-link group" href="#"><strong>Team 28</strong></a>
+                </li>
+                <li class="custom-control custom-switch">
+                  <a class="nav-link group" href="#"><input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                    <label class="custom-control-label" for="customSwitch1"></label></a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                </li>    
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="far fa-question-circle"></i></a>
+                </li>
+                <li class="nav-item">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search ">
+                    <div class="input-group-append">
+                      <button class="btn btn-success" type="button">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                </li>
+              </li>
+          </ul>
+          
+        </div>
+      </nav>
+    
+      <div class="wrapper">
+        <div class="top">
+          <h2>Add Assemble</h2>
+          <p>Source warehouse &ensp; <input type="text" id="source"></p>
+          <p>product code &emsp;&ensp;&ensp;&nbsp;&nbsp; <input type="text" id="code" required></p>
+          <p>product description <input type="text" id="description"></p>
+          <p>Assemble quantity &nbsp; <input type="text" id="assquantity"></p>
+          <p>Assemble by &nbsp;&ensp;&ensp;&ensp;&ensp;&ensp; <input type="text" id="assemble"></p>
+          <p>Comments &nbsp;&ensp;&ensp;&nbsp;&ensp;&ensp;&nbsp;&ensp;&ensp;<textarea id="comments" rows="2" cols="20" name="description"></textarea></p>
+          <P>Component product<input type="text" id="product"></p>
+          <p>Quantity&emsp;&ensp;&ensp;&nbsp;&emsp;&ensp;&emsp; <input type="text" id="quantity"></p>
+          <p>Wastage Qty &emsp;&ensp;&ensp;&nbsp;&ensp;<input type="text" id="wastage"></p>
+          <button onclick="calculate">add</button>
+          <br><br>
+          <div data-spy="scroll" data-target="#navbar-example2" data-offset="0"></div>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Component product</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Wastage</th>
+                <th scope="col">Unit</th>
+                <th scope="col">Availability</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Unit cost</th>
+                <th scope="col">Total cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td id="answer1"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+              </tr>
+            </tbody>
+          </table>
+        </div> 
+        </div>
+      </div>
+
+        <!--container-->
+        <div class="container">
+           <div class="row">
+             <!--sidebar-->
+              <div class="col-md-2 bg-success d-none d-md-block sidebar">
+                <div class="left-sidebar">
+                  <li class="nav-item">
+                    <a class="nav-link" href="addAssembly.html"><i class="fas fa-tachometer-alt">Dashboard</i></a>
+                  </li> 
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                       Assemblies
+                      </a>  
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item " href="addAssembly.html">Add assembly</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="addDissembly.html">Add dissembly</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="viewAssemblies.html">View assemblies</a>
+                    <div class="dropdown-divider"></div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Bill of Materials  
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="addBills.html">Add bills of materials</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="viewBills.html">view bills of materials</a>  
+                      <div class="dropdown-divider"></div>
+                    </div>
+                  <h1 class="logo">28</h1>
+                </div>
+              </div> 
+           </div>
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <footer>DEVELOPED BY IBUKUN SAMUEL</footer>
+  </body>
+  <!--Javascript-->
+  <script src="msm.js"></script>
+</html>
