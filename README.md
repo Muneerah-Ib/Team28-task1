@@ -13,3 +13,4 @@ It allows users to be able to instantly generate receipt without having to go th
 
 
 Design (Figma link) : https://www.figma.com/file/6R6CXuUkA2CXWHJDkFNOL0/MSM
+https://github.com/Muneerah-Ib/Team28-task1/
