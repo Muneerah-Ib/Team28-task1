@@ -24,3 +24,7 @@ It allows users to be able to instantly generate receipt without having to go th
 
 Design (Figma link) : https://www.figma.com/file/6R6CXuUkA2CXWHJDkFNOL0/MSM
 
+Front-end : https://muneerah-ib.github.io/Team28-task1/MSM1/addAssembly.html
+
+ADDITIONAL INFORMATION: Data should be inputed in the input box,after that add button should be clicked to update data freely into the table below input boxes
+
