@@ -45,9 +45,8 @@ input[type=text]{
     outline:none;
     border:1px solid green;
 }
-button{
-    background-color: green;
-       
+input[type=button]{
+    background-color: green;       
 }
 
 textarea{
